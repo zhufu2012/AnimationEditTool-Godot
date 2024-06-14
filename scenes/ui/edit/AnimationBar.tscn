@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=3 uid="uid://clh4adyyrr2wr"]
+
+[ext_resource type="Texture2D" uid="uid://e65imaa8sjqg" path="res://img/ico/向后.svg" id="1_l3080"]
+[ext_resource type="Texture2D" uid="uid://ca4fagbx5lbst" path="res://img/ico/从结束开始.svg" id="2_6fbqc"]
+[ext_resource type="Texture2D" uid="uid://crlfakoho54gx" path="res://img/ico/播放.svg" id="3_02i5u"]
+[ext_resource type="Texture2D" uid="uid://boelylmmmoyj5" path="res://img/ico/从头开始.svg" id="4_mp6ta"]
+[ext_resource type="Texture2D" uid="uid://dhbg8sxmjet6u" path="res://img/ico/向前.svg" id="5_ll3y3"]
+[ext_resource type="Texture2D" uid="uid://bfqvjpeb2wa7d" path="res://img/ico/AutoPlay.svg" id="6_mvohj"]
+
+[node name="AnimationBar" type="Panel"]
+offset_right = 943.0
+offset_bottom = 32.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 41.0
+offset_bottom = 40.0
+scale = Vector2(0.75, 0.75)
+icon = ExtResource("1_l3080")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_right = 73.0
+offset_bottom = 40.0
+scale = Vector2(0.75, 0.75)
+icon = ExtResource("2_6fbqc")
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 65.0
+offset_right = 105.0
+offset_bottom = 40.0
+scale = Vector2(0.75, 0.75)
+icon = ExtResource("3_02i5u")
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_right = 137.0
+offset_bottom = 40.0
+scale = Vector2(0.75, 0.75)
+icon = ExtResource("4_mp6ta")
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 129.0
+offset_right = 169.0
+offset_bottom = 40.0
+scale = Vector2(0.75, 0.75)
+icon = ExtResource("5_ll3y3")
+
+[node name="SpinBox" type="SpinBox" parent="."]
+layout_mode = 0
+offset_left = 177.0
+offset_right = 260.063
+offset_bottom = 31.0
+
+[node name="VSeparator" type="VSeparator" parent="."]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 3.0
+offset_right = 268.0
+offset_bottom = 29.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 5.0
+offset_right = 317.0
+offset_bottom = 28.0
+text = "动画"
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 315.0
+offset_right = 818.0
+offset_bottom = 30.0
+item_count = 3
+popup/item_0/text = "Main"
+popup/item_0/id = 0
+popup/item_1/text = "动画1"
+popup/item_1/id = 1
+popup/item_2/text = "动画2"
+popup/item_2/id = 2
+
+[node name="Button6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 828.0
+offset_top = 4.0
+offset_right = 852.0
+offset_bottom = 28.0
+icon = ExtResource("6_mvohj")

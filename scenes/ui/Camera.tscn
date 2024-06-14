@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://pwbdaqcny44m"]
+
+[ext_resource type="Script" path="res://core/ui/Camera.cs" id="1_bnrvg"]
+
+[node name="Camera" type="Camera2D"]
+position = Vector2(600, 350)
+script = ExtResource("1_bnrvg")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -600.0
+offset_top = -350.0
+offset_right = -560.0
+offset_bottom = -310.0

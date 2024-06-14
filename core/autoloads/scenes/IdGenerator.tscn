@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://i0gnibmv2xgp"]
+
+[ext_resource type="Script" path="res://core/autoloads/IdGenerator.cs" id="1_5ocrp"]
+
+[node name="IdGenerator" type="Node"]
+script = ExtResource("1_5ocrp")

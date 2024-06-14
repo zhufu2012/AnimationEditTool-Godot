@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwtxuf53eiymi"]
+
+[ext_resource type="Script" path="res://core/ui/track/TrackTree.cs" id="1_vk34t"]
+
+[node name="TrackTree" type="Tree"]
+offset_top = -1.0
+offset_right = 218.0
+offset_bottom = 464.0
+scale = Vector2(0.994969, 0.987755)
+columns = 4
+allow_rmb_select = true
+script = ExtResource("1_vk34t")
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+gui_embed_subwindows = true
+size = Vector2i(124, 116)
+visible = true
+item_count = 4
+item_0/text = "增加关键帧"
+item_0/id = 0
+item_1/text = "修改轨道属性"
+item_1/id = 1
+item_2/text = "修改轨道类型"
+item_2/id = 2
+item_3/text = "删除轨道"
+item_3/id = 3

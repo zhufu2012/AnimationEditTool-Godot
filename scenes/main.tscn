@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://cx8olugvyv1jp"]
+
+[ext_resource type="Script" path="res://core/Main.cs" id="1_2kum5"]
+[ext_resource type="PackedScene" uid="uid://bloar50kuapla" path="res://scenes/ui/BaseTree.tscn" id="1_g0snd"]
+[ext_resource type="PackedScene" uid="uid://c2xoj42q4x6df" path="res://scenes/ui/AnimationManager.tscn" id="3_1pofq"]
+[ext_resource type="PackedScene" uid="uid://pwbdaqcny44m" path="res://scenes/ui/Camera.tscn" id="3_n643b"]
+[ext_resource type="PackedScene" uid="uid://41huohc38qq" path="res://scenes/ui/AnimationEdit.tscn" id="5_rcjhk"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2kum5")
+
+[node name="AnimationManager" parent="." instance=ExtResource("3_1pofq")]
+show_behind_parent = true
+layout_mode = 1
+offset_left = 253.0
+offset_top = 40.0
+offset_right = 1154.0
+offset_bottom = 270.0
+scale = Vector2(0.997747, 1)
+
+[node name="Camera" parent="." instance=ExtResource("3_n643b")]
+position = Vector2(650, 400)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuBar" type="MenuBar" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 33.0
+flat = true
+
+[node name="动画" type="PopupMenu" parent="CanvasLayer/MenuBar"]
+size = Vector2i(172, 100)
+item_count = 3
+item_0/text = "新建动画"
+item_0/id = 0
+item_1/text = "打开最近编辑的动画"
+item_1/id = 1
+item_2/text = "退出"
+item_2/id = 2
+
+[node name="工具" type="PopupMenu" parent="CanvasLayer/MenuBar"]
+
+[node name="帮助" type="PopupMenu" parent="CanvasLayer/MenuBar"]
+
+[node name="BaseTree" parent="CanvasLayer" instance=ExtResource("1_g0snd")]
+offset_left = 3.0
+offset_top = 38.0
+offset_right = 251.0
+offset_bottom = 395.0
+
+[node name="AnimationEdit" parent="CanvasLayer" instance=ExtResource("5_rcjhk")]
+offset_top = 400.0
+offset_right = 587.5
+offset_bottom = 399.2

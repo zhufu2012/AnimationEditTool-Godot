@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://db31kvsp302xx"]
+
+[ext_resource type="Script" path="res://core/ui/TrackEdit.cs" id="1_7cyny"]
+
+[node name="TrackEdit" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 346.0
+offset_top = 170.0
+offset_right = -698.0
+offset_bottom = -500.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7cyny")
+
+[node name="IsUser" type="CheckBox" parent="."]
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 24.0
+
+[node name="track_type" type="Sprite2D" parent="."]
+position = Vector2(38, 7)
+
+[node name="attr_name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 57.0
+offset_right = 146.0
+offset_bottom = 23.0
+text = "属性名称"
+
+[node name="LineBetween" type="HSeparator" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 27.0
+offset_right = 152.0
+offset_bottom = 31.0
+
+[node name="VSeparator" type="VSeparator" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 1.0
+offset_right = 154.0
+offset_bottom = 29.0

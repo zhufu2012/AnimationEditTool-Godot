@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4nhlt4xr68jh"]
+
+[ext_resource type="Script" path="res://core/ui/Track.cs" id="1_rshiv"]
+
+[node name="Track" type="Control"]
+layout_mode = 3
+anchor_right = 0.316
+anchor_bottom = 0.049
+offset_right = -0.200012
+offset_bottom = -0.300003
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rshiv")
