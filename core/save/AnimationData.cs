@@ -22,7 +22,7 @@ namespace AnimationEditTool_Core
         public float Transition;
         public TrackKeyPoint()
         {
-            data_id = IdGenerator.generate(IdConstant.ID_TYPE_TrackKeyPoint);
+            data_id = IdGenerator.Generate(IdConstant.ID_TYPE_TrackKeyPoint);
         }
     }
 
@@ -44,7 +44,7 @@ namespace AnimationEditTool_Core
         public List<TrackKeyPoint> KeyList = new List<TrackKeyPoint>();
         public AnimTrack()
         {
-            data_id = IdGenerator.generate(IdConstant.ID_TYPE_AnimTrack);
+            data_id = IdGenerator.Generate(IdConstant.ID_TYPE_AnimTrack);
         }
     }
 
@@ -65,7 +65,7 @@ namespace AnimationEditTool_Core
         public List<AnimTrack> AnimTrackList = new List<AnimTrack>();
         public AnimSingle()
         {
-            data_id = IdGenerator.generate(IdConstant.ID_TYPE_AnimSingle);
+            data_id = IdGenerator.Generate(IdConstant.ID_TYPE_AnimSingle);
         }
     }
 
@@ -86,7 +86,7 @@ namespace AnimationEditTool_Core
         
         public AnimComponent()
         {
-            data_id = IdGenerator.generate(IdConstant.ID_TYPE_AnimComponent);
+            data_id = IdGenerator.Generate(IdConstant.ID_TYPE_AnimComponent);
         }
 
     }
@@ -106,9 +106,10 @@ namespace AnimationEditTool_Core
         //动画组合
         public AnimCombination()
         {
-            data_id = IdGenerator.generate(IdConstant.ID_TYPE_AnimCombination);
+            data_id = IdGenerator.Generate(IdConstant.ID_TYPE_AnimCombination);
         }
-
+		
+		//添加动画组件
         public void AddComponent(AnimComponent component)
         {
             AnimComponentList.Add(component);
@@ -118,18 +119,63 @@ namespace AnimationEditTool_Core
 
 
 
-    //动画数据
+    //动画数据,一个项目的数据，每个项目都有一个动画数据
     public class AnimationData
     {
-        //动画组合唯一id,选中的id,
+        //动画组合唯一id,当前选中的动画组合id,
         [JsonInclude]
-        public long selete_id;
+        public long selete_id;//这些要改
 
         [JsonInclude]
         public List<AnimCombination> AnimCombinationList = new List<AnimCombination>();
 
-
-
+		
+		//获取当前选中的动画组合数据
+		public AnimCombination GetSelectCombination()
+		{
+			for(int i=0;i<AnimCombinationList.Count;i++)
+			{
+				if (AnimCombinationList[i].data_id == selete_id)
+                {
+					return AnimCombinationList[i];
+				}
+			}
+			return null;
+		}
+		
+		// 通过唯一数据id,直接获取对应数据
+		public object GetDataIdObject(long data_id)
+		{
+			
+			
+			
+			foreach (AnimCombination combination in AnimCombinationList)
+			{
+				if (combination.data_id == data_id)
+					return combination;
+				foreach (AnimComponent component in combination.AnimComponentList)
+				{
+					if (component.data_id == data_id)
+						return component;
+					foreach (AnimSingle single in component.AnimSingleList)
+					{
+						if (single.data_id == data_id)
+							return single;
+						foreach (AnimTrack track in single.AnimTrackList)
+						{
+							if (track.data_id == data_id)
+								return track;
+							foreach (TrackKeyPoint keyPoint in track.KeyList)
+							{
+								if (keyPoint.data_id == data_id)
+									return keyPoint;
+							}
+						}
+					}
+				}
+			}
+			return null;
+		}
 
 
         //更新对应id的动画组合数据AnimCombination

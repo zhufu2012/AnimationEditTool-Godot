@@ -17,7 +17,15 @@ namespace AnimationEditTool_Core
 
         //图片数据字典
         public static Dictionary<string, Texture2D> ico_dict = new Dictionary<string, Texture2D>();
-
+		
+		//////////////////////////动画播放数据//////////////////////////////////////
+		//动画播放器-通过这个播放器，将动画展示出来
+		AnimationPlayer AnimaPlayer;
+		//所选择的动画组合中，所有的图片列表
+		List<Sprite2D> SpriteList;
+		
+		//////////////////////////动画播放数据//////////////////////////////////////
+		
         public Main() {
             InitIco();
         }
@@ -41,8 +49,10 @@ namespace AnimationEditTool_Core
         {
             tree = GetNode<BaseTree>("CanvasLayer/BaseTree");
             AnimationEdit = GetNode<AnimationEdit>("CanvasLayer/AnimationEdit");
-			
             AnimationEdit.Position = new Vector2(0, 400);
+			
+			//按照当前选择的动画数据 组织动画播放器节点
+			AnimaPlayer = GetNode<AnimationPlayer>("AnimaPlayer");
         }
 
 
@@ -57,8 +67,9 @@ namespace AnimationEditTool_Core
         {
             for (int i = 0; i < TrackTreeList.Count; i++)
             {
-                TrackTreeList[i].UpdataData();//更新数据
+                TrackTreeList[i].UpdataData();//更新轨道数据
             }
+			
         }
 
 

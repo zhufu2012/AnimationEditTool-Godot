@@ -23,6 +23,7 @@ IdGenerator="*res://core/autoloads/scenes/IdGenerator.tscn"
 
 window/size/viewport_width=1300
 window/size/viewport_height=800
+window/size/resizable=false
 window/stretch/mode="canvas_items"
 
 [dotnet]

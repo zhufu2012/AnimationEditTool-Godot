@@ -10,16 +10,30 @@ namespace AnimationEditTool_Core
         /// AnimComponent 动画组件
         /// </summary>
         public long data_id;
-
+		
+		//当前动画组件
         public AnimCombination animCombination;
-
+		
+		//滚动条-轨道树
         public ScrollContainer ScrollTrack;
-
+		//滚动条-按钮
         public ScrollContainer ScrollButton;
-
+		
+		//添加动画树
         public Button AddTrackbutton;
+		//删除动画树
         public Button DelTrackbutton;
         private HBoxContainer EditPanel;//轨道树画布
+		
+		////////////////////////////////动画播放相关数据///////////////////////////////////////////////
+		//是否播放
+		public bool is_playing = false;
+		//播放速度 停止0  正常1  反向-1
+		public int playspeed = 0;
+		
+		
+		
+		////////////////////////////////动画播放相关数据///////////////////////////////////////////////
 
 
         /// <summary>

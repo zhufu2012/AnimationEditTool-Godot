@@ -1,0 +1,143 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk21ugsj8j0s1"]
+
+[ext_resource type="Script" path="res://core/ProjectView.cs" id="1_vdhmr"]
+[ext_resource type="Theme" uid="uid://b3m60yu7pn0ue" path="res://assets/themes/popup_shadow.tres" id="2_apco7"]
+[ext_resource type="Texture2D" uid="uid://qswb1yok40ph" path="res://img/ico/返回.svg" id="2_bajns"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fbv21"]
+font_size = 20
+
+[node name="ProjectView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vdhmr")
+
+[node name="ProjectManagePanel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1300.0
+offset_bottom = 800.0
+
+[node name="ProjectItemList" type="ItemList" parent="ProjectManagePanel"]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 100.0
+offset_right = 1130.0
+offset_bottom = 712.0
+item_count = 1
+item_0/text = "项目1"
+
+[node name="OpenRecentlyBut" type="Button" parent="ProjectManagePanel"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 100.0
+offset_right = 400.0
+offset_bottom = 150.0
+text = "打开最近启动过的动画项目"
+
+[node name="CreatProjectBut" type="Button" parent="ProjectManagePanel"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 170.0
+offset_right = 400.0
+offset_bottom = 220.0
+text = "新建动画项目"
+
+[node name="SelectType" type="OptionButton" parent="ProjectManagePanel"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 240.0
+offset_right = 400.0
+offset_bottom = 290.0
+item_count = 4
+selected = 0
+popup/item_0/text = "双击打开项目"
+popup/item_0/id = 0
+popup/item_1/text = "双击编辑项目"
+popup/item_1/id = 1
+popup/item_2/text = "双击移除项目"
+popup/item_2/id = 2
+popup/item_3/text = "双击删除项目"
+popup/item_3/id = 3
+
+[node name="ProjectCreatePanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1300.0
+offset_bottom = 800.0
+
+[node name="ReturnButton" type="Button" parent="ProjectCreatePanel"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 35.0
+text = "返回"
+icon = ExtResource("2_bajns")
+expand_icon = true
+
+[node name="LabelName" type="Label" parent="ProjectCreatePanel"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 220.0
+offset_right = 330.0
+offset_bottom = 265.0
+text = "项目名称："
+label_settings = SubResource("LabelSettings_fbv21")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEditName" type="LineEdit" parent="ProjectCreatePanel/LabelName"]
+offset_left = 140.0
+offset_right = 475.0
+offset_bottom = 45.0
+placeholder_text = "使用英文比较好"
+
+[node name="LabelPath" type="Label" parent="ProjectCreatePanel"]
+offset_left = 210.0
+offset_top = 280.0
+offset_right = 330.0
+offset_bottom = 325.0
+text = "项目路径："
+label_settings = SubResource("LabelSettings_fbv21")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEditPath" type="LineEdit" parent="ProjectCreatePanel/LabelPath"]
+offset_left = 140.0
+offset_right = 870.0
+offset_bottom = 45.0
+
+[node name="LabelSavePath" type="Label" parent="ProjectCreatePanel"]
+offset_left = 210.0
+offset_top = 340.0
+offset_right = 350.0
+offset_bottom = 385.0
+text = "项目导出路径："
+label_settings = SubResource("LabelSettings_fbv21")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEditSavePath" type="LineEdit" parent="ProjectCreatePanel/LabelSavePath"]
+offset_left = 140.0
+offset_right = 870.0
+offset_bottom = 45.0
+
+[node name="CreatButton" type="Button" parent="ProjectCreatePanel"]
+custom_minimum_size = Vector2(100, 35)
+layout_mode = 0
+offset_left = 975.0
+offset_top = 435.0
+offset_right = 1075.0
+offset_bottom = 480.0
+text = "创建项目"
+
+[node name="FileFrame" type="FileDialog" parent="."]
+initial_position = 2
+size = Vector2i(600, 600)
+theme = ExtResource("2_apco7")
+ok_button_text = "选择当前文件夹"
+mode_overrides_title = false
+file_mode = 2
+access = 2

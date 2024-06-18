@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Remnant Afterglow Project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\AnimationEditTool\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{61475703-9183-4F58-907F-EDB9E8A5E3E4}|Animation Edit Tool.csproj|d:\\remnant afterglow project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\animationedittool\\core\\projectview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61475703-9183-4F58-907F-EDB9E8A5E3E4}|Animation Edit Tool.csproj|solutionrelative:core\\projectview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61475703-9183-4F58-907F-EDB9E8A5E3E4}|Animation Edit Tool.csproj|d:\\remnant afterglow project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\animationedittool\\core\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61475703-9183-4F58-907F-EDB9E8A5E3E4}|Animation Edit Tool.csproj|solutionrelative:core\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61475703-9183-4F58-907F-EDB9E8A5E3E4}|Animation Edit Tool.csproj|d:\\remnant afterglow project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\animationedittool\\scenes\\basetree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61475703-9183-4F58-907F-EDB9E8A5E3E4}|Animation Edit Tool.csproj|solutionrelative:scenes\\basetree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61475703-9183-4F58-907F-EDB9E8A5E3E4}|Animation Edit Tool.csproj|d:\\remnant afterglow project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\animationedittool\\core\\autoloads\\saveloadsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61475703-9183-4F58-907F-EDB9E8A5E3E4}|Animation Edit Tool.csproj|solutionrelative:core\\autoloads\\saveloadsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 277,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main.cs",
+              "DocumentMoniker": "D:\\Remnant Afterglow Project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\AnimationEditTool\\core\\Main.cs",
+              "RelativeDocumentMoniker": "core\\Main.cs",
+              "ToolTip": "D:\\Remnant Afterglow Project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\AnimationEditTool\\core\\Main.cs",
+              "RelativeToolTip": "core\\Main.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAwCcAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T12:47:39.355Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProjectView.cs",
+              "DocumentMoniker": "D:\\Remnant Afterglow Project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\AnimationEditTool\\core\\ProjectView.cs",
+              "RelativeDocumentMoniker": "core\\ProjectView.cs",
+              "ToolTip": "D:\\Remnant Afterglow Project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\AnimationEditTool\\core\\ProjectView.cs",
+              "RelativeToolTip": "core\\ProjectView.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAIwF0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T14:16:14.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseTree.cs",
+              "DocumentMoniker": "D:\\Remnant Afterglow Project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\AnimationEditTool\\scenes\\BaseTree.cs",
+              "RelativeDocumentMoniker": "scenes\\BaseTree.cs",
+              "ToolTip": "D:\\Remnant Afterglow Project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\AnimationEditTool\\scenes\\BaseTree.cs",
+              "RelativeToolTip": "scenes\\BaseTree.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAADwvxMAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T20:30:55.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SaveLoadSystem.cs",
+              "DocumentMoniker": "D:\\Remnant Afterglow Project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\AnimationEditTool\\core\\autoloads\\SaveLoadSystem.cs",
+              "RelativeDocumentMoniker": "core\\autoloads\\SaveLoadSystem.cs",
+              "ToolTip": "D:\\Remnant Afterglow Project\\\u5DE5\u5177\\\u52A8\u753B\u914D\u7F6E\u5DE5\u5177\\AnimationEditTool\\core\\autoloads\\SaveLoadSystem.cs",
+              "RelativeToolTip": "core\\autoloads\\SaveLoadSystem.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T13:22:45.531Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

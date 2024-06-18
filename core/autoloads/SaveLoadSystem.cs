@@ -16,10 +16,10 @@ namespace AnimationEditTool_Core
         public static SettingData settingData = new SettingData();
         public static string AnimationData_path = "res://save/AnimationData.json";
         public static string SettingData_path = "res://save/SettingData.json";
-
+        
         //
         double SaveIntervalTime = 0;//保存间隔-距离上一次保存的时间
-        double SaveInterval = 0;//保存间隔 单位秒
+        private static double SaveInterval = 0;//保存间隔 单位秒
 
 
         static JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions()
@@ -30,12 +30,9 @@ namespace AnimationEditTool_Core
             Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.CjkUnifiedIdeographs, UnicodeRanges.CjkSymbolsandPunctuation)
         };
 		
-		/// <summary>
-        /// 初始化数据,时间间隔
-        /// </summary>
-        public void IntData()
-        {
-            SaveInterval = DataConstant.SaveIntervalTime;
+		static SaveLoadSystem()
+		{
+			SaveInterval = DataConstant.SaveIntervalTime;
 			FileAccess AnimationData_file = FileAccess.Open(AnimationData_path, FileAccess.ModeFlags.Read);
             FileAccess SettingData_file = FileAccess.Open(SettingData_path, FileAccess.ModeFlags.Read);
             //动画数据读取
@@ -44,14 +41,7 @@ namespace AnimationEditTool_Core
             //配置数据读取
             settingData = JsonSerializer.Deserialize<SettingData>(SettingData_file.GetAsText(), jsonSerializerOptions);
             SettingData_file.Close();
-        }
-
-        public override void _Ready()
-        {
-            IntData();//初始化数据
-            base._Ready();
-        }
-
+		}
 
         public override void _PhysicsProcess(double delta)
         {
@@ -59,7 +49,6 @@ namespace AnimationEditTool_Core
             while (SaveIntervalTime >= SaveInterval)
             {
                 Save();
-                base._PhysicsProcess(delta);
                 SaveIntervalTime -= SaveInterval;
             }
         }
